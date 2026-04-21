@@ -3,19 +3,13 @@ import { articles } from './data.js';
 import { layout } from './layout.js';
 import { slugify, truncate, countWords, escapeHTML } from './stringUtils.js';
 
-/**
- * Création du dossier dist
- */
+/* Création du dossier dist */
 const dist = './dist';
 if (!fs.existsSync(dist)) {
     fs.mkdirSync(dist);
 }
 
-/**
- * ============================
- * PAGE STATISTIQUES
- * ============================
- */
+/* PAGE STATISTIQUES */
 function generateStatsPage(data) {
 
     //Nombre total de mots
@@ -63,11 +57,7 @@ function generateStatsPage(data) {
     return layout("Statistiques", body);
 }
 
-/**
- * ============================
- * PAGE ARCHIVES
- * ============================
- */
+/* PAGE ARCHIVES */
 function generateArchivesPage(data) {
 
     const list = data.map(article => `
@@ -86,11 +76,7 @@ function generateArchivesPage(data) {
     `);
 }
 
-/**
- * ============================
- * BUILD DU SITE
- * ============================
- */
+/* BUILD DU SITE */
 export const build = () => {
 
     //Page d'accueil
