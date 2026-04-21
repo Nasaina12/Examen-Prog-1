@@ -28,9 +28,9 @@ const startServer = (port = 3000) => {
     });
 
     SERVER.listen(port, () => {
-        console.log(`🌍 Serveur démarré sur http://localhost:${port}`);
-        console.log(`💡 Ctrl+C pour arrêter`);
+        console.log(` Serveur démarré sur http://localhost:${port}`);
+        console.log(` Ctrl+C pour arrêter`);
     });
 };
 
-export { startServer };
+export { startServer }; 
