@@ -1,6 +1,4 @@
-/**
- * Transforme un texte en slug URL
- */
+/* Transformation de texte en slug URL */
 export function slugify(text) {
     return text
         .toLowerCase()
@@ -10,9 +8,7 @@ export function slugify(text) {
         .replace(/\s+/g, "-");
 }
 
-/**
- * Tronque un texte sans couper un mot
- */
+/* Tronque un texte sans couper un mot */
 export function truncate(text, maxLength) {
     if (text.length <= maxLength) return text;
 
@@ -20,16 +16,12 @@ export function truncate(text, maxLength) {
     return truncated.substring(0, truncated.lastIndexOf(" ")) + "...";
 }
 
-/**
- * Compte le nombre de mots
-*/
+/* Compte le nombre de mots */
 export function countWords(text) {
     return text.trim().split(/\s+/).length;
 }
 
-/**
- * Sécurise le HTML
- */
+/* Sécurise le HTML*/
 export function escapeHTML(text) {
     return text
         .replace(/&/g, "&amp;")
